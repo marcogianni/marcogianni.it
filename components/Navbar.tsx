@@ -8,8 +8,10 @@ export default function Navbar() {
       <div className="flex h-14 items-center p-6">
         <div className="md:flex">
           <Link href="/" className="mr-4 flex items-center">
-            <div className="pl-2 font-extrabold tracking-wider">
-              MARCOGIANNI.IT
+            <div className="flex items-center gap-1">
+              <div className="pl-2 font-extrabold tracking-wider">
+                MARCOGIANNI.IT
+              </div>
             </div>
           </Link>
         </div>
