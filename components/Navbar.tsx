@@ -4,13 +4,13 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Navbar() {
   return (
-    <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-40 w-full">
       <div className="flex h-14 items-center p-6">
         <div className="md:flex">
           <Link href="/" className="mr-4 flex items-center">
             <div className="flex items-center gap-1">
               <div className="pl-2 font-extrabold tracking-wider">
-                MARCOGIANNI.IT
+                marcogianni_it
               </div>
             </div>
           </Link>
