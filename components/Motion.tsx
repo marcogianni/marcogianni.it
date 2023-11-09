@@ -23,3 +23,19 @@ export function Motion(props: Props) {
     </motion.div>
   );
 }
+
+export function MotionInView(props: Props) {
+  const { children, className, transition, ...rest } = props;
+
+  return (
+    <motion.div
+      className={className}
+      transition={{ ...transition, ease: easing }}
+      whileInView="visible"
+      viewport={{ once: true, amount: "all" }}
+      {...rest}
+    >
+      {children}
+    </motion.div>
+  );
+}
