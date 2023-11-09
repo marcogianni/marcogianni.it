@@ -12,7 +12,7 @@ export default function Intro() {
           alt="Background"
           fill
           src={"/images/bg.webp"}
-          className="opacity-100"
+          className="opacity-50"
         />
       </div>
       <div className="w-full flex flex-col items-center">
