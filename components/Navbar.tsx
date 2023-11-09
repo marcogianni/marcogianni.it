@@ -22,9 +22,11 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
               >
-                <div className="text-lg pl-2 font-bold tracking-wider">
+                <div className="text-lg pl-2 font-bold tracking-wider ">
                   marcogianni
-                  <span className="text-primary font-black pl-[1px]">.it</span>
+                  <span className="font-black pl-[1px] text-transparent bg-clip-text bg-gradient-to-r to-primary from-purple-500">
+                    .it
+                  </span>
                 </div>
               </Motion>
             </div>

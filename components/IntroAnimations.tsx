@@ -13,7 +13,7 @@ export default function IntroAnimation() {
         version="1.1"
         viewBox="0 0 1422 800"
         opacity="1"
-        className="absolute left-0 right-0 z-0 h-full w-full pointer-events-none"
+        className="absolute left-0 right-0 z-0 w-full pointer-events-none"
       >
         <defs>
           <linearGradient
