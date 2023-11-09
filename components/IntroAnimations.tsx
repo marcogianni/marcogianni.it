@@ -13,7 +13,7 @@ export default function IntroAnimation() {
         version="1.1"
         viewBox="0 0 1422 800"
         opacity="1"
-        className="fixed left-0 right-0 top-0 bottom-0 z-0 h-full w-full pointer-events-none"
+        className="absolute left-0 right-0 z-0 h-full w-full pointer-events-none"
       >
         <defs>
           <linearGradient
@@ -24,22 +24,22 @@ export default function IntroAnimation() {
             id="oooscillate-grad"
           >
             <stop
-              stop-color="hsl(265, 55%, 30%)"
-              stop-opacity="1"
+              stopColor="hsl(265, 55%, 30%)"
+              stopOpacity="1"
               offset="0%"
             ></stop>
             <stop
-              stop-color="hsl(265, 55%, 60%)"
-              stop-opacity="1"
+              stopColor="hsl(265, 55%, 60%)"
+              stopOpacity="1"
               offset="100%"
             ></stop>
           </linearGradient>
         </defs>
         <g
-          stroke-width="2"
+          strokeWidth="2"
           stroke="url(#oooscillate-grad)"
           fill="none"
-          stroke-linecap="round"
+          strokeLinecap="round"
         >
           {/* <motion.path
           initial={{ pathLength: 0, pathOffset: 1 }}
