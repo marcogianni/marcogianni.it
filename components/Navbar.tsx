@@ -16,7 +16,7 @@ export default function Navbar() {
         <div className="md:flex">
           <Link href="/" className="mr-4 flex items-center">
             <div className="flex items-center gap-1">
-              <div className="pl-2 font-bold tracking-wider">
+              <div className="text-lg pl-2 font-bold tracking-wider">
                 marcogianni
                 <span className="text-primary font-black pl-[1px]">.it</span>
               </div>
