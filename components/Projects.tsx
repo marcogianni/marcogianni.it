@@ -1,5 +1,5 @@
 import { MotionInView } from "@/components/Motion";
-import Image from "next/image";
+import PC from "@/components/projects/PC";
 
 export default function Project() {
   return (
@@ -19,35 +19,7 @@ export default function Project() {
           </MotionInView>
         </div>
       </div>
-      <div className="grid grid-cols-12 mt-12 gap-6">
-        <div className="col-span-4 relative">
-          <Image
-            className="rounded-lg"
-            alt="Piercarlo Carcereri"
-            width={2000}
-            height={2000}
-            src="/images/PiercarloCarcereri.webp"
-          />
-        </div>
-        <div className="col-span-4 relative">
-          <Image
-            className="rounded-lg"
-            alt="Wine Label"
-            width={1652}
-            height={2362}
-            src="/images/WineLabel.webp"
-          />
-        </div>
-        <div className="col-span-4 relative">
-          <Image
-            className="rounded-lg"
-            alt="Oil Label"
-            width={1652}
-            height={2988}
-            src="/images/OilLabel.webp"
-          />
-        </div>
-      </div>
+      <PC />
     </>
   );
 }
