@@ -40,14 +40,14 @@ export default function IntroAnimation() {
         fill="none"
         stroke-linecap="round"
       >
-        <motion.path
+        {/* <motion.path
           initial={{ pathLength: 0, pathOffset: 1 }}
           animate={{ pathLength: 1, pathOffset: 0 }}
           transition={{ ease: easing, duration: 3, delay: 0 }}
           id="7"
           d="M 0 552 Q 355.5 215 711 400 Q 1066.5 585 1422 552"
           opacity="0.78"
-        ></motion.path>
+        ></motion.path> */}
         <motion.path
           initial={{ pathLength: 0, pathOffset: 1 }}
           animate={{ pathLength: 1, pathOffset: 0 }}
@@ -88,14 +88,14 @@ export default function IntroAnimation() {
           d="M 0 207 Q 355.5 215 711 400 Q 1066.5 585 1422 207"
           opacity="0.12"
         ></motion.path>
-        <motion.path
+        {/* <motion.path
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
           transition={{ ease: easing, duration: 3, delay: 0 }}
           id="1"
           d="M 0 138 Q 355.5 215 711 400 Q 1066.5 585 1422 138"
           opacity="0.80"
-        ></motion.path>
+        ></motion.path> */}
       </g>
     </svg>
   );
