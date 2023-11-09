@@ -1,20 +1,24 @@
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import IntroAnimation from "@/components/IntroAnimations";
 
 export default function Intro() {
   return (
     <div className="w-full h-[calc(100vh-3.5em-3em)] flex items-center content-center">
-      <div>
-        <div className="text-6xl font-semibold">Hello</div>
-        <div className="text-2xl mt-4">
-          My name is Marco, I&apos;m a frontend engineer from Italy. Interested
-          in blockchain, web, design and user experience.{" "}
-          <span className="opacity-50">
-            I&apos;m currently spending my time with the wonderful people at
-            Over the Reality.
-          </span>
+      <Image
+        alt="Background"
+        fill
+        src={"/images/bg.webp"}
+        className="opacity-60 pointer-events-none"
+      />
+      <div className="w-full flex flex-col items-center">
+        <div className="text-6xl font-semibold mt-4 w-8/12 leading-[75px] text-center relative z-20">
+          Hi. I’m <span className="text-primary font-extrabold">Marco</span>,
+          nice to meet you. Please take a look around!
         </div>
-
-        <Button className="mt-6">Visit LinkedIn Profile</Button>
+        {/* <div className="w-2/12">
+          <Button className="mt-6 w-full">Discover</Button>
+        </div> */}
+        <IntroAnimation />
       </div>
     </div>
   );

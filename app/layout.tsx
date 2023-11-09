@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font";
+import { Mulish } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
+
+const mulish = Mulish({ subsets: ["latin"], variable: "--font-mulish" });
 
 export const metadata: Metadata = {
   title: "marcogianni.it",
@@ -17,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={GeistSans.className}>
+      <body className={mulish.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
