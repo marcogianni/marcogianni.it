@@ -57,5 +57,9 @@
     @apply bg-background text-foreground;
     overscroll-behavior: none;
   }
+
+  .project-image {
+    @apply rounded-lg shadow-gray-300/20 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px];
+  }
 }
 
