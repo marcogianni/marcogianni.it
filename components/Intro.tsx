@@ -47,7 +47,9 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 3.5, ease: "easeInOut" }}
         >
-          <Button className="mt-6 px-12">Discover</Button>
+          <Button variant="outline" className="mt-6 px-8">
+            Discover
+          </Button>
         </Motion>
       </div>
       <IntroAnimation />

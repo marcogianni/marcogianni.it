@@ -1,5 +1,7 @@
 import { MotionInView } from "@/components/Motion";
 import PC from "@/components/projects/PC";
+import Brainyware from "@/components/projects/Brainyware";
+import OVERMarketplace from "@/components/projects/OVERMarketplace";
 
 export default function Project() {
   return (
@@ -19,7 +21,11 @@ export default function Project() {
           </MotionInView>
         </div>
       </div>
-      <PC />
+      <div className="flex flex-col gap-32">
+        <PC />
+        <Brainyware />
+        <OVERMarketplace />
+      </div>
     </>
   );
 }
