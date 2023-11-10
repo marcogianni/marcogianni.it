@@ -53,8 +53,8 @@ export default function ContactForm() {
           <div className="col-span-6 col-start-4">
             <Form {...form}>
               <form className="space-y-3 w-full">
-                <h1 className="text-3xl font-bold tracking-tight mb-4">
-                  Login
+                <h1 className="text-4xl font-bold tracking-tight mb-4">
+                  Send me a message!
                 </h1>
 
                 <FormField
@@ -118,6 +118,7 @@ export default function ContactForm() {
                     <FormItem>
                       <FormControl>
                         <Textarea
+                          rows={8}
                           id="message"
                           placeholder="Type your message here."
                           {...field}
@@ -133,7 +134,7 @@ export default function ContactForm() {
                     onClick={form.handleSubmit(onSubmit)}
                     loading={loading}
                     size="lg"
-                    className="w-full"
+                    className="w-full px-8"
                   >
                     Send Message
                   </Button>
