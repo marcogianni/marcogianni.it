@@ -23,7 +23,7 @@ export default function Intro() {
           transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
           className="w-full sm:w-8/12 leading-[75px] relative z-20"
         >
-          <div className="text-2xl font-medium relative z-20 text-center">
+          <div className="text-2xl font-regular tracking-wide relative z-20 text-center">
             Frontend Enginner & UI/UX Designer
           </div>
         </Motion>
@@ -35,7 +35,7 @@ export default function Intro() {
         >
           <div className="text-4xl sm:text-6xl font-medium leading-12 sm:leading-[75px] text-center relative z-20">
             Hi. I’m{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r to-primary from-purple-500 font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r to-primary from-purple-500 font-semibold">
               Marco
             </span>
             , nice to meet you. Please take a look around!
