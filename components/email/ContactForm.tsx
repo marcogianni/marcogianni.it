@@ -47,7 +47,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-black mt-40 py-20">
+    <div className="dark:bg-black dark:text-white text-black mt-40 py-20">
       <main className="lg:container lg:mx-auto z-10 ">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-6 col-start-4">
