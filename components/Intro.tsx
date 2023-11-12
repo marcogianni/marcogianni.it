@@ -23,8 +23,8 @@ export default function Intro() {
           transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
           className="w-full sm:w-8/12 leading-[75px] relative z-20"
         >
-          <div className="text-2xl font-regular tracking-wide relative z-20 text-center">
-            Frontend Enginner & UI/UX Designer
+          <div className="text-2xl font-regular uppercase tracking-wide relative z-20 text-center">
+            Frontend - UI/UX
           </div>
         </Motion>
         <Motion
@@ -33,7 +33,7 @@ export default function Intro() {
           transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
           className="w-full sm:w-8/12 leading-[75px] relative z-20"
         >
-          <div className="text-4xl sm:text-6xl font-medium leading-12 sm:leading-[75px] text-center relative z-20">
+          <div className="text-4xl sm:text-6xl font-medium text-center relative z-20 mt-6">
             Hi. I’m{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-primary from-purple-500 font-semibold">
               Marco
@@ -42,15 +42,9 @@ export default function Intro() {
           </div>
         </Motion>
 
-        <Motion
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 3.5, ease: "easeInOut" }}
-        >
-          <Button variant="outline" className="mt-6 px-8">
-            Discover
-          </Button>
-        </Motion>
+        <Button size="lg" variant="secondary" className="mt-12 px-8">
+          Discover
+        </Button>
       </div>
       <IntroAnimation />
     </div>
