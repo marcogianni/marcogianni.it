@@ -22,7 +22,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
               >
-                <div className="text-lg pl-2 font-medium tracking-wider ">
+                <div className="text-xl pl-2 font-medium tracking-wider ">
                   marcogianni
                   <span className="font-bold pl-[1px] text-transparent bg-clip-text bg-gradient-to-r to-primary from-purple-500">
                     .it

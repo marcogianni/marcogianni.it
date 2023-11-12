@@ -15,7 +15,7 @@ export default function Project() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="font-semibold text-4xl text-center mx-auto w-6/12"
+            className="font-medium text-4xl text-center mx-auto w-6/12"
           >
             Latest Projects
           </MotionInView>

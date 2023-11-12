@@ -13,7 +13,7 @@ export default function Skills() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="font-semibold text-4xl text-center mx-auto w-6/12"
+            className="font-medium text-4xl text-center mx-auto w-6/12"
           >
             I design and code beautifully simple things, and I love what I do.
           </MotionInView>
@@ -24,16 +24,16 @@ export default function Skills() {
           initial="hidden"
           transition={{ duration: 0.7 }}
           variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
           }}
-          className="col-span-4 col-start-3 bg-violet-100 text-black rounded-l-[40px] py-10 px-12"
+          className="col-span-4 col-start-3 bg-violet-200 text-black rounded-l-[40px] py-10 px-12"
         >
           <div className="text-center">
             <div className="rounded-full bg-gradient-to-r to-primary from-purple-500 w-16 h-16 flex items-center justify-center mx-auto">
               <CodeIcon className="h-10 w-10 text-white" />
             </div>
-            <h3 className="font-bold text-xl mt-6">Frontend Engineer</h3>
+            <h3 className="font-semibold text-2xl mt-6">Frontend Engineer</h3>
             <p className="text-lg pt-4">
               I like to code things from scratch, and enjoy bringing ideas to
               life in the browser.
@@ -56,16 +56,16 @@ export default function Skills() {
           initial="hidden"
           transition={{ delay: 0.2, duration: 0.7 }}
           variants={{
-            hidden: { opacity: 0, x: 50 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
           }}
-          className="col-span-4 bg-slate-100 text-black rounded-r-[40px] py-10 px-12"
+          className="col-span-4 bg-violet-100 text-black rounded-r-[40px] py-10 px-12"
         >
           <div className="text-center">
             <div className="rounded-full bg-gradient-to-r to-primary from-purple-500 w-16 h-16 flex items-center justify-center mx-auto">
               <LayersIcon className="h-10 w-10 text-white" />
             </div>
-            <h3 className="font-bold text-xl mt-6">UI/UX Designer</h3>
+            <h3 className="font-semibold text-2xl mt-6">UI/UX Designer</h3>
             <p className="text-lg pt-4">
               I value simple content structure, clean design patterns, and
               interactions.

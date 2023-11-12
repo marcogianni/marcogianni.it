@@ -18,10 +18,10 @@ export default function Intro() {
       </div>
       <div className="w-full flex flex-col items-center">
         <Motion
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
-          className="w-full sm:w-8/12 leading-[75px] relative z-20"
+          transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
+          className="w-full sm:w-9/12 leading-[75px] relative z-20"
         >
           <div className="text-2xl font-regular uppercase tracking-wide relative z-20 text-center">
             Frontend - UI/UX
@@ -31,9 +31,9 @@ export default function Intro() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
-          className="w-full sm:w-8/12 leading-[75px] relative z-20"
+          className="w-full sm:w-9/12 leading-[75px] relative z-20"
         >
-          <div className="text-4xl sm:text-6xl font-medium text-center relative z-20 mt-6">
+          <div className="text-4xl sm:text-6xl font-medium text-center relative z-20">
             Hi. I’m{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-primary from-purple-500 font-semibold">
               Marco
@@ -41,10 +41,15 @@ export default function Intro() {
             , nice to meet you. Please take a look around!
           </div>
         </Motion>
-
-        <Button size="lg" variant="secondary" className="mt-12 px-8">
-          Discover
-        </Button>
+        <Motion
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 3.5, ease: "easeInOut" }}
+        >
+          <Button size="lg" variant="secondary" className="mt-12 px-8">
+            Discover
+          </Button>
+        </Motion>
       </div>
       <IntroAnimation />
     </div>

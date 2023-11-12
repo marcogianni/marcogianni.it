@@ -47,13 +47,13 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-gray-500 mt-40 py-20">
-      <main className="lg:container lg:mx-auto pl-6 pr-6 pt-6 z-10 ">
+    <div className="bg-black mt-40 py-20">
+      <main className="lg:container lg:mx-auto z-10 ">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-6 col-start-4">
             <Form {...form}>
               <form className="space-y-3 w-full">
-                <h1 className="text-4xl font-bold tracking-tight mb-4">
+                <h1 className="font-semibold text-4xl text-center tracking-tight mb-6">
                   Send me a message!
                 </h1>
 
@@ -66,7 +66,7 @@ export default function ContactForm() {
                         <Input
                           placeholder="Name"
                           id="name"
-                          className="col-span-3"
+                          className="col-span-3 text-md"
                           {...field}
                         />
                       </FormControl>
@@ -84,7 +84,7 @@ export default function ContactForm() {
                         <Input
                           placeholder="Email"
                           id="email"
-                          className="col-span-3"
+                          className="col-span-3 text-md"
                           {...field}
                         />
                       </FormControl>
@@ -102,7 +102,7 @@ export default function ContactForm() {
                         <Input
                           placeholder="Subject"
                           id="subject"
-                          className="col-span-3"
+                          className="col-span-3 text-md"
                           {...field}
                         />
                       </FormControl>
@@ -119,6 +119,7 @@ export default function ContactForm() {
                       <FormControl>
                         <Textarea
                           rows={8}
+                          className="text-md resize-none"
                           id="message"
                           placeholder="Type your message here."
                           {...field}
