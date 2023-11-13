@@ -25,7 +25,9 @@ const EmailFormSchema = z.object({
   message: z.string(),
 });
 
-export default function ContactForm() {
+export type EmailFormValues = z.infer<typeof EmailFormSchema>;
+
+export function ContactForm() {
   const [loading, setLoading] = useState(false);
   const form = useForm<z.infer<typeof EmailFormSchema>>({
     resolver: zodResolver(EmailFormSchema),
@@ -37,9 +39,19 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof EmailFormSchema>) {
+  async function onSubmit(values: z.infer<typeof EmailFormSchema>) {
     setLoading(true);
     console.debug("onSubmit", values);
+
+    const response = await fetch("/api/email/send", {
+      method: "POST",
+      body: JSON.stringify(values),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    console.debug("response", response);
 
     setLoading(false);
 

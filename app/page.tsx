@@ -1,7 +1,7 @@
 import Intro from "@/components/Intro";
 import Skills from "@/components/Skills";
 import Project from "@/components/Projects";
-import ContactForm from "@/components/email/ContactForm";
+import { ContactForm } from "@/components/email/ContactForm";
 
 export default function Home() {
   return (
