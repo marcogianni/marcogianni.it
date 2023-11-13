@@ -1,5 +1,5 @@
 import * as React from "react";
-import { EmailFormValues } from "./ContactForm";
+import { EmailFormValues } from "../ContactForm";
 
 const TemplateUser: React.FC<Readonly<EmailFormValues>> = ({ name }) => (
   <div>

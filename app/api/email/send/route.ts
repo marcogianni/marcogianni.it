@@ -1,5 +1,5 @@
-import TemplateOwner from "@/components/email/TemplateOwner";
-import TemplateUser from "@/components/email/TemplateUser";
+import TemplateOwner from "@/components/email/templates/template-owner";
+import TemplateUser from "@/components/email/templates/template-user";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
