@@ -32,10 +32,10 @@ export function ContactForm() {
   const form = useForm<z.infer<typeof EmailFormSchema>>({
     resolver: zodResolver(EmailFormSchema),
     defaultValues: {
-      email: undefined,
-      name: undefined,
-      subject: undefined,
-      message: undefined,
+      email: "",
+      name: "",
+      subject: "",
+      message: "",
     },
   });
 
@@ -51,11 +51,8 @@ export function ContactForm() {
       },
     });
 
-    console.debug("response", response);
-
     setLoading(false);
-
-    return true;
+    form.reset();
   }
 
   return (
