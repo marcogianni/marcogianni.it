@@ -65,7 +65,7 @@ export function ContactForm() {
           <div className="col-span-6 col-start-4">
             <Form {...form}>
               <form className="space-y-3 w-full">
-                <h1 className="font-semibold text-4xl text-center tracking-tight mb-6">
+                <h1 className="font-medium text-4xl text-center tracking-tight mb-6">
                   Send me a message!
                 </h1>
 
