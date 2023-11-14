@@ -1,14 +1,28 @@
 "use client";
 
-import { motion, cubicBezier } from "framer-motion";
+import { motion, cubicBezier, useScroll, useSpring } from "framer-motion";
+import { useRef } from "react";
 
 const easing = cubicBezier(0.31, 0.77, 0.52, 0.26); // default easing
-const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut" };
 
 export default function IntroAnimation() {
+  const scrollRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    offset: ["end end", "start start"],
+    target: scrollRef,
+  });
+
+  const pathLength = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.01,
+  });
+
   return (
     <>
       <svg
+        ref={scrollRef}
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         viewBox="0 0 1422 800"
@@ -41,14 +55,13 @@ export default function IntroAnimation() {
           fill="none"
           strokeLinecap="round"
         >
-          {/* <motion.path
-          initial={{ pathLength: 0, pathOffset: 1 }}
-          animate={{ pathLength: 1, pathOffset: 0 }}
-          transition={{ ease: easing, duration: 3, delay: 0 }}
-          id="7"
-          d="M 0 552 Q 355.5 215 711 400 Q 1066.5 585 1422 552"
-          opacity="0.78"
-        ></motion.path> */}
+          <motion.path
+            stroke="#c893fcc2"
+            style={{ pathLength: pathLength, pathOffset: 1 }}
+            id="7"
+            d="M 0 552 Q 355.5 215 711 400 Q 1066.5 585 1422 552"
+            opacity="0.78"
+          ></motion.path>
           <motion.path
             initial={{ pathLength: 0, pathOffset: 1 }}
             animate={{ pathLength: 1, pathOffset: 0 }}
@@ -90,13 +103,12 @@ export default function IntroAnimation() {
             opacity="0.12"
           ></motion.path>
           {/* <motion.path
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ ease: easing, duration: 3, delay: 0 }}
-          id="1"
-          d="M 0 138 Q 355.5 215 711 400 Q 1066.5 585 1422 138"
-          opacity="0.80"
-        ></motion.path> */}
+            stroke="#c893fcc2"
+            style={{ pathLength: pathLength, pathOffset: 0 }}
+            id="1"
+            d="M 0 138 Q 355.5 215 711 400 Q 1066.5 585 1422 138"
+            opacity="0.80"
+          ></motion.path> */}
         </g>
       </svg>
     </>
