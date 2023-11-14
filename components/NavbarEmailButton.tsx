@@ -1,7 +1,7 @@
 "use client";
 
-import { useScrollTo } from "framer-motion-scroll-to-hook";
 import { Button } from "@/components/ui/button";
+import { useScrollTo } from "@/lib/hooks/useScrollTo";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { usePathname } from "next/navigation";
 
