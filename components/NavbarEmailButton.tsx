@@ -31,7 +31,7 @@ export default function NavbarEmailButton() {
   return (
     <TooltipProvider delayDuration={0}>
       <Tooltip>
-        <TooltipTrigger className="flex">
+        <TooltipTrigger className="flex" asChild>
           <Button variant="outline" size="icon" onClick={handleClick}>
             <EnvelopeClosedIcon className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
           </Button>

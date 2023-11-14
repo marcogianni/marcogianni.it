@@ -4,7 +4,7 @@ import { MotionInView } from "@/components/Motion";
 export default function Skills() {
   return (
     <>
-      <div className="grid grid-cols-12 gap-4">
+      <div id="skills" className="grid grid-cols-12 gap-4">
         <div className="col-span-12">
           <MotionInView
             initial="hidden"

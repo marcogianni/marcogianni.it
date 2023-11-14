@@ -41,7 +41,6 @@ export function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof EmailFormSchema>) {
     setLoading(true);
-    console.debug("onSubmit", values);
 
     const response = await fetch("/api/email/send", {
       method: "POST",
@@ -50,6 +49,8 @@ export function ContactForm() {
         "Content-Type": "application/json",
       },
     });
+
+    console.debug("response", response);
 
     setLoading(false);
     form.reset();

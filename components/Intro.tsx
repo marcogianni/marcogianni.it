@@ -3,6 +3,7 @@ import Image from "next/image";
 import IntroAnimation from "@/components/IntroAnimations";
 import { Motion } from "@/components/Motion";
 import { Button } from "@/components/ui/button";
+import IntroButton from "@/components/IntroButton";
 
 export default function Intro() {
   return (
@@ -46,9 +47,7 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 3.5, ease: "easeInOut" }}
         >
-          <Button size="lg" variant="secondary" className="mt-12 px-8">
-            Discover
-          </Button>
+          <IntroButton />
         </Motion>
       </div>
       <IntroAnimation />

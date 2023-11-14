@@ -41,12 +41,26 @@ export default function Navbar() {
         >
           <div className="flex flex-1 items-center space-x-2 justify-end">
             <NavbarEmailButton />
-            <Button variant="outline" size="icon">
-              <GitHubLogoIcon className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
-            </Button>
-            <Button variant="outline" size="icon">
-              <LinkedInLogoIcon className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
-            </Button>
+            <a
+              href="https://github.com/marcogianni"
+              target="_blank"
+              className="flex"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" size="icon">
+                <GitHubLogoIcon className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
+              </Button>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/marco-gianni/"
+              target="_blank"
+              className="flex"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" size="icon">
+                <LinkedInLogoIcon className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
+              </Button>
+            </a>
             <DividerVerticalIcon />
             <ThemeSwitcher />
           </div>
