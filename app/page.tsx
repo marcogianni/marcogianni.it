@@ -12,7 +12,7 @@ export default function Home() {
         <Project />
       </main>
       <ContactForm />
-      <div className="h-[2000px]" />
+      {/* <div className="h-[2000px]" /> */}
     </>
   );
 }

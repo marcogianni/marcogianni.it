@@ -5,6 +5,13 @@ import { useScrollTo } from "@/lib/hooks/useScrollTo";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { usePathname } from "next/navigation";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 export default function NavbarEmailButton() {
   const pathname = usePathname();
   const scrollToId = useScrollTo({
@@ -22,8 +29,15 @@ export default function NavbarEmailButton() {
   };
 
   return (
-    <Button variant="outline" size="icon" onClick={handleClick}>
-      <EnvelopeClosedIcon className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
-    </Button>
+    <TooltipProvider delayDuration={0}>
+      <Tooltip>
+        <TooltipTrigger className="flex">
+          <Button variant="outline" size="icon" onClick={handleClick}>
+            <EnvelopeClosedIcon className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent align="center">Send me a message</TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }

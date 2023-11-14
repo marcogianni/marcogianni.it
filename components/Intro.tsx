@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default function Intro() {
   return (
     <div className="w-full h-screen flex items-center content-center overflow-hidden">
-      <div className="fixed h-screen w-screen top-0 left-0 right-0 bottom-0 z-0 pointer-events-none">
+      <div className="fixed h-screen w-screen top-0 left-20 right-20 bottom-20 z-0 pointer-events-none">
         <Image
           priority
           alt="Background"
@@ -18,8 +18,8 @@ export default function Intro() {
       </div>
       <div className="w-full flex flex-col items-center">
         <Motion
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
           className="w-full sm:w-9/12 leading-[75px] relative z-20"
         >
