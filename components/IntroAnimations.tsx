@@ -13,7 +13,18 @@ export default function IntroAnimation() {
     target: scrollRef,
   });
 
+  const { scrollYProgress: scrollYProgress2 } = useScroll({
+    offset: ["start start", "end end"],
+    target: scrollRef,
+  });
+
   const pathLength = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.01,
+  });
+
+  const pathLength2 = useSpring(scrollYProgress2, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.01,
@@ -27,7 +38,7 @@ export default function IntroAnimation() {
         version="1.1"
         viewBox="0 0 1422 800"
         opacity="1"
-        className="absolute left-0 right-0 z-0 w-full pointer-events-none"
+        className="absolute left-[-2px] right-[-2px] z-0 w-[calc(100vw + 4px)] pointer-events-none"
       >
         <defs>
           <linearGradient
@@ -102,13 +113,13 @@ export default function IntroAnimation() {
             d="M 0 207 Q 355.5 215 711 400 Q 1066.5 585 1422 207"
             opacity="0.12"
           ></motion.path>
-          {/* <motion.path
+          <motion.path
             stroke="#c893fcc2"
-            style={{ pathLength: pathLength, pathOffset: 0 }}
+            style={{ pathLength: pathLength2, pathOffset: 0 }}
             id="1"
             d="M 0 138 Q 355.5 215 711 400 Q 1066.5 585 1422 138"
             opacity="0.80"
-          ></motion.path> */}
+          ></motion.path>
         </g>
       </svg>
     </>
