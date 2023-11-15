@@ -27,7 +27,7 @@ export default function Skills() {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="col-span-4 col-start-3 bg-violet-200 text-black rounded-l-[40px] py-10 px-12"
+          className="col-span-4 col-start-3 border border-primary rounded-l-[40px] py-10 px-10"
         >
           <div className="text-center">
             <div className="rounded-full bg-gradient-to-r to-primary from-purple-500 w-16 h-16 flex items-center justify-center mx-auto">
@@ -59,7 +59,7 @@ export default function Skills() {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="col-span-4 bg-violet-100 text-black rounded-r-[40px] py-10 px-12"
+          className="col-span-4 border border-primary border-l-0 rounded-r-[40px] py-10 px-10"
         >
           <div className="text-center">
             <div className="rounded-full bg-gradient-to-r to-primary from-purple-500 w-16 h-16 flex items-center justify-center mx-auto">

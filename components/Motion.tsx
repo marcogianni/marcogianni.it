@@ -32,7 +32,7 @@ export function MotionInView(props: Props) {
       className={className}
       transition={{ ...transition, ease: easing }}
       whileInView="visible"
-      viewport={{ once: true, amount: "all" }}
+      viewport={{ once: true, amount: 0.5 }}
       {...rest}
     >
       {children}

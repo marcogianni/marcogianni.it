@@ -5,9 +5,10 @@ import { useScrollTo } from "@/lib/hooks/useScrollTo";
 
 export default function IntroButton() {
   const scrollToId = useScrollTo({
-    mass: 0.1,
     type: "spring",
-    velocity: 1,
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.01,
   });
   return (
     <Button

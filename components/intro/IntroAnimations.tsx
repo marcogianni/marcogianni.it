@@ -9,12 +9,12 @@ export default function IntroAnimation() {
   const scrollRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
-    offset: ["end end", "start start"],
+    offset: ["100% 100%", "0% 0%"],
     target: scrollRef,
   });
 
   const { scrollYProgress: scrollYProgress2 } = useScroll({
-    offset: ["start start", "end end"],
+    offset: ["0% 0%", "100% 100%"],
     target: scrollRef,
   });
 
@@ -38,7 +38,7 @@ export default function IntroAnimation() {
         version="1.1"
         viewBox="0 0 1422 800"
         opacity="1"
-        className="absolute left-[-2px] right-[-2px] z-0 w-[calc(100vw + 4px)] pointer-events-none"
+        className="absolute left-0 -ml-1 -mr-1 right-0 z-0 w-full pointer-events-none"
       >
         <defs>
           <linearGradient

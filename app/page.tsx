@@ -1,4 +1,4 @@
-import Intro from "@/components/Intro";
+import Intro from "@/components/intro/Intro";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import { ContactForm } from "@/components/email/ContactForm";
@@ -12,7 +12,7 @@ export default function Home() {
         <Projects />
       </main>
       <ContactForm />
-      {/* <div className="h-[2000px]" /> */}
+      <div className="h-[2000px]" />
     </>
   );
 }

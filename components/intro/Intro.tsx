@@ -1,9 +1,8 @@
 import Image from "next/image";
 
-import IntroAnimation from "@/components/IntroAnimations";
+import IntroAnimation from "@/components/intro/IntroAnimations";
+import IntroButton from "@/components/intro/IntroButton";
 import { Motion } from "@/components/Motion";
-import { Button } from "@/components/ui/button";
-import IntroButton from "@/components/IntroButton";
 
 export default function Intro() {
   return (
@@ -14,7 +13,7 @@ export default function Intro() {
           alt="Background"
           fill
           src={"/images/bg.webp"}
-          className="opacity-50"
+          className="opacity-40"
         />
       </div>
       <div className="w-full flex flex-col items-center">
@@ -24,7 +23,7 @@ export default function Intro() {
           transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
           className="w-full sm:w-9/12 leading-[75px] relative z-20"
         >
-          <div className="text-2xl font-regular uppercase tracking-wide relative z-20 text-center">
+          <div className="text-xl font-regular uppercase relative z-20 text-center">
             Frontend - UI/UX
           </div>
         </Motion>
@@ -32,11 +31,11 @@ export default function Intro() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
-          className="w-full sm:w-9/12 leading-[75px] relative z-20"
+          className="w-full sm:w-9/12 mt-4 leading-[75px] relative z-20"
         >
           <div className="text-4xl sm:text-6xl font-medium text-center relative z-20">
             Hi. I’m{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r to-primary from-purple-500 font-semibold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-500 animate-gradient font-semibold animate-gradient">
               Marco
             </span>
             , nice to meet you. Please take a look around!
