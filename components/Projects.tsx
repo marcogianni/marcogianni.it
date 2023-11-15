@@ -22,9 +22,9 @@ export default function Project() {
         </div>
       </div>
       <div className="flex flex-col gap-20 sm:gap-32">
+        <OVERMarketplace />
         <PC />
         <Brainyware />
-        <OVERMarketplace />
       </div>
     </>
   );
