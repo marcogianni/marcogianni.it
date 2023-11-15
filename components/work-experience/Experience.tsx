@@ -24,25 +24,23 @@ export default function Experience(props: Props) {
     <motion.div
       key={id}
       transition={{ duration: 0.4, ease: easing }}
-      initial={{ opacity: 0, x: 40 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -40 }}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -40 }}
       className="w-full"
     >
-      <ScrollArea className="h-[350px] w-full">
-        <div>
-          <div className="text-2xl text-medium">{title}</div>
-          <div className="text-lg text-medium opacity-50">{period}</div>
-          <div className="mt-4 flex gap-1 flex-wrap">
-            {tools.map((title, index) => (
-              <Badge key={index} variant="outline" className="text-sm">
-                {title}
-              </Badge>
-            ))}
-          </div>
-          <Separator className="mt-6" />
-          {children}
+      <ScrollArea className="h-auto sm:h-[350px] w-full">
+        <div className="text-2xl text-medium">{title}</div>
+        <div className="text-lg text-medium opacity-50">{period}</div>
+        <div className="mt-4 flex gap-1 flex-wrap">
+          {tools.map((title, index) => (
+            <Badge key={index} variant="outline" className="text-sm">
+              {title}
+            </Badge>
+          ))}
         </div>
+        <Separator className="mt-6" />
+        {children}
       </ScrollArea>
     </motion.div>
   );

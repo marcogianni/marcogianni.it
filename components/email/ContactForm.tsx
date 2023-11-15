@@ -59,7 +59,7 @@ export function ContactForm() {
   return (
     <div
       id="contact-form"
-      className="dark:bg-black dark:text-white text-black mt-40 py-20 px-10 sm:px-0"
+      className="dark:bg-black dark:text-white text-black mt-20 sm:mt-40 py-20 px-10 sm:px-0"
     >
       <main className="lg:container lg:mx-auto z-10">
         <div className="grid grid-cols-12 gap-4">

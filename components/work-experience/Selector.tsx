@@ -10,14 +10,15 @@ interface Props {
 
 export default function Selector(props: Props) {
   const { id, title, selected = "", handleSelect } = props;
+
   return (
     <div
-      className="flex flex-col gap-4 cursor-pointer"
+      className="flex w-full flex-col cursor-pointer"
       onClick={() => handleSelect(id)}
     >
       <div
         className={cn(
-          "w-full text-xl py-4 px-6 rounded-md border hover:bg-secondary/80 flex items-center justify-between transition-colors duration-500",
+          "text-md sm:text-xl py-2 sm:py-4 px-4 sm:px-6 rounded-md border hover:bg-secondary/80 flex items-center justify-between transition-colors duration-500",
           selected === id && "bg-secondary"
         )}
       >

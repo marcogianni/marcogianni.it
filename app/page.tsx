@@ -14,7 +14,6 @@ export default function Home() {
         <WorkExperience />
       </main>
       <ContactForm />
-      {/* <div className="h-[2000px]" /> */}
     </>
   );
 }

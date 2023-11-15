@@ -20,7 +20,7 @@ export default function WorkExperience() {
 
   return (
     <>
-      <div className="grid grid-cols-12  gap-10 sm:gap-24 mt-40">
+      <div className="grid grid-cols-12 mt-40">
         <div className="col-span-12 mb-0">
           <MotionInView
             initial="hidden"
@@ -29,12 +29,14 @@ export default function WorkExperience() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="font-medium text-4xl text-center mx-auto w-full sm:w-6/12"
+            className="font-medium text-4xl text-center sm:mx-auto w-full sm:w-6/12"
           >
             Work Experience
           </MotionInView>
         </div>
-        <div className="col-span-12 sm:col-span-4 flex flex-col gap-4">
+      </div>
+      <div className="sm:grid grid-cols-12 gap-10 sm:gap-24 mt-10">
+        <div className="col-span-12 sm:col-span-4 flex flex-col gap-2 sm:gap-4">
           <Selector
             handleSelect={handleSelect}
             id="over-the-reality"
@@ -60,7 +62,7 @@ export default function WorkExperience() {
             title="< Playground / >"
           />
         </div>
-        <div className="col-span-12 sm:col-span-8 relative">
+        <div className="col-span-12 sm:col-span-8 mt-8 sm:mt-0">
           <AnimatePresence>
             <Experience
               id="over-the-reality"
