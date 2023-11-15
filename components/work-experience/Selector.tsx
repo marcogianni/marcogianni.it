@@ -12,7 +12,7 @@ export default function Selector(props: Props) {
   const { id, title, selected = "", handleSelect } = props;
   return (
     <div
-      className="col-span-4 flex flex-col gap-4 cursor-pointer"
+      className="flex flex-col gap-4 cursor-pointer"
       onClick={() => handleSelect(id)}
     >
       <div

@@ -13,13 +13,13 @@ export default function Skills() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="font-medium text-4xl text-center mx-auto w-6/12"
+            className="font-medium text-4xl text-center mx-auto w-full sm:w-6/12"
           >
             I design and code beautifully simple things, and I love what I do.
           </MotionInView>
         </div>
       </div>
-      <div className="grid grid-cols-12 mt-12">
+      <div className="grid grid-cols-12 mt-12 gap-6 sm:gap-0">
         <MotionInView
           initial="hidden"
           transition={{ duration: 0.7 }}
@@ -27,7 +27,7 @@ export default function Skills() {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="col-span-4 col-start-3 border border-primary rounded-l-[40px] py-10 px-10"
+          className="col-span-12 sm:col-span-4 sm:col-start-3 border border-primary rounded-l-[40px] rounded-r-[40px] sm:rounded-r-[0px] py-10 px-10"
         >
           <div className="text-center">
             <div className="rounded-full bg-gradient-to-r to-primary from-purple-500 w-16 h-16 flex items-center justify-center mx-auto">
@@ -59,7 +59,7 @@ export default function Skills() {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="col-span-4 border border-primary border-l-0 rounded-r-[40px] py-10 px-10"
+          className="col-span-12 sm:col-span-4 border border-primary sm:border-l-0 rounded-r-[40px] rounded-l-[40px] sm:rounded-l-[0px]  py-10 px-10"
         >
           <div className="text-center">
             <div className="rounded-full bg-gradient-to-r to-primary from-purple-500 w-16 h-16 flex items-center justify-center mx-auto">

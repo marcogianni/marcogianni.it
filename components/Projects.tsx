@@ -15,13 +15,13 @@ export default function Project() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="font-medium text-4xl text-center mx-auto w-6/12"
+            className="font-medium text-4xl text-center mx-auto w-full sm:w-6/12"
           >
             Latest Projects
           </MotionInView>
         </div>
       </div>
-      <div className="flex flex-col gap-32">
+      <div className="flex flex-col gap-20 sm:gap-32">
         <PC />
         <Brainyware />
         <OVERMarketplace />

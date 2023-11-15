@@ -30,17 +30,19 @@ export default function Experience(props: Props) {
       className="w-full"
     >
       <ScrollArea className="h-[350px] w-full">
-        <div className="text-2xl text-medium">{title}</div>
-        <div className="text-lg text-medium opacity-50">{period}</div>
-        <div className="mt-4 flex gap-1 flex-wrap">
-          {tools.map((title, index) => (
-            <Badge key={index} variant="outline" className="text-sm">
-              {title}
-            </Badge>
-          ))}
+        <div>
+          <div className="text-2xl text-medium">{title}</div>
+          <div className="text-lg text-medium opacity-50">{period}</div>
+          <div className="mt-4 flex gap-1 flex-wrap">
+            {tools.map((title, index) => (
+              <Badge key={index} variant="outline" className="text-sm">
+                {title}
+              </Badge>
+            ))}
+          </div>
+          <Separator className="mt-6" />
+          {children}
         </div>
-        <Separator className="mt-6" />
-        {children}
       </ScrollArea>
     </motion.div>
   );

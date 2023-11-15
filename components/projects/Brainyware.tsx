@@ -6,7 +6,7 @@ import ProjectDescription from "@/components/projects/ProjectDescription";
 export default function Brainyware() {
   return (
     <div className="grid grid-cols-12 mt-12 gap-8">
-      <div className="col-span-9 relative">
+      <div className="col-span-12 sm:col-span-9 relative">
         <MotionInView
           initial="hidden"
           transition={{ duration: 0.8 }}
@@ -30,7 +30,7 @@ export default function Brainyware() {
           query.
         </ProjectDescription>
       </div>
-      <div className="col-span-3 relative">
+      <div className="col-span-12 sm:col-span-3 relative">
         <MotionInView
           initial="hidden"
           transition={{ duration: 0.8, delay: 0.2 }}

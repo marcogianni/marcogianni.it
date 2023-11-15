@@ -59,11 +59,11 @@ export function ContactForm() {
   return (
     <div
       id="contact-form"
-      className="dark:bg-black dark:text-white text-black mt-40 py-20"
+      className="dark:bg-black dark:text-white text-black mt-40 py-20 px-10 sm:px-0"
     >
-      <main className="lg:container lg:mx-auto z-10 ">
+      <main className="lg:container lg:mx-auto z-10">
         <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-6 col-start-4">
+          <div className="col-span-12 sm:col-span-6 sm:col-start-4">
             <Form {...form}>
               <form className="space-y-3 w-full">
                 <h1 className="font-medium text-4xl text-center tracking-tight mb-6">

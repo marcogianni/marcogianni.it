@@ -7,7 +7,7 @@ interface Props {
 
 export default function ProjectDescription(props: Props) {
   return (
-    <div className="text-xl mt-4">
+    <div className="text-md sm:text-xl mt-4">
       <p>{props.children}</p>
       <a
         className="mt-3 block"

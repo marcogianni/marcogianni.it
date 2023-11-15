@@ -6,7 +6,7 @@ import ProjectDescription from "@/components/projects/ProjectDescription";
 export default function PC() {
   return (
     <div className="grid grid-cols-12 mt-12 gap-8">
-      <div className="col-span-4 relative">
+      <div className="col-span-12 sm:col-span-4 relative">
         <MotionInView
           initial="hidden"
           transition={{ duration: 0.8 }}
@@ -29,7 +29,7 @@ export default function PC() {
           this screenshot the logo and bottle labels for wine and oil.
         </ProjectDescription>
       </div>
-      <div className="col-span-4 relative">
+      <div className="col-span-12 sm:col-span-4 relative">
         <MotionInView
           initial="hidden"
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -47,7 +47,7 @@ export default function PC() {
           />
         </MotionInView>
       </div>
-      <div className="col-span-4 relative">
+      <div className="col-span-12 sm:col-span-4 relative">
         <MotionInView
           initial="hidden"
           transition={{ duration: 0.8, delay: 0.4 }}

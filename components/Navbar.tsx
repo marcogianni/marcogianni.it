@@ -13,7 +13,7 @@ import NavbarEmailButton from "@/components/NavbarEmailButton";
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full">
-      <div className="flex h-14 items-center p-6">
+      <div className="flex h-14 items-center p-4 sm:p-6">
         <div className="md:flex">
           <Link href="/" className="mr-4 flex items-center">
             <div className="flex items-center gap-1">
@@ -39,7 +39,7 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
         >
-          <div className="flex flex-1 items-center space-x-2 justify-end">
+          <div className="flex flex-1 items-center space-x-1 sm:space-x-2 justify-end">
             <NavbarEmailButton />
             <a
               href="https://github.com/marcogianni"
@@ -61,7 +61,7 @@ export default function Navbar() {
                 <LinkedInLogoIcon className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
               </Button>
             </a>
-            <DividerVerticalIcon />
+            <DividerVerticalIcon className="hidden sm:flex" />
             <ThemeSwitcher />
           </div>
         </Motion>
