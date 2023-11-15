@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { AxiomWebVitals } from "next-axiom";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
@@ -50,13 +50,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={borna.className}>
+        <AxiomWebVitals />
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
           {children}
           <Footer />
         </ThemeProvider>
       </body>
-      <GoogleTagManager gtmId="GTM-K28ZJ644" />
     </html>
   );
 }
