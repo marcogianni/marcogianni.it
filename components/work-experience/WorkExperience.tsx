@@ -1,11 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import { MotionInView } from "@/components/Motion";
-import { AnimatePresence, motion } from "framer-motion";
-import Selector from "@/components/work-experience/Selector";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+
+import Selector from "@/components/work-experience/Selector";
 import Experience from "@/components/work-experience/Experience";
+
+import { MotionInView } from "@/components/Motion";
+import { Button } from "@/components/ui/button";
 
 export default function WorkExperience() {
   const [selected, setSelected] = useState("over-the-reality");
@@ -48,6 +52,12 @@ export default function WorkExperience() {
           selected={selected}
           title="Ideo"
         />
+        <Selector
+          handleSelect={handleSelect}
+          id="playground"
+          selected={selected}
+          title="< Playground / >"
+        />
       </div>
       <div className="col-span-8 relative">
         <AnimatePresence>
@@ -61,7 +71,6 @@ export default function WorkExperience() {
               "Next.js",
               "Tailwind CSS",
               "Styled Components",
-              "GSAP",
               "MUI",
               "Solidity",
               "Hardhat",
@@ -88,17 +97,39 @@ export default function WorkExperience() {
             id="archeido"
             selected={selected === "archeido"}
             title="Frontend Engineer & UI/UX Designer"
-            period="April 2021 - present"
+            period="May 2019 - March 2021"
             tools={[
               "React",
-              "Next.js",
-              "Tailwind CSS",
+              "Gatsby.js",
               "Styled Components",
-              "GSAP",
-              "MUI",
-              "Solidity",
-              "Hardhat",
+              "Redux",
+              "Redux Saga",
+              "Ant Design",
+              "Kotlin",
+              "Sketch",
             ]}
+          >
+            <ul className="mt-6 list-disc pl-4 leading-8">
+              <li>
+                Designed, developed and mantained a Financial Management
+                Frontend for an investment brokerage firm. Application built
+                with React.js, Redux and Redux-saga to allow collaborators to
+                manage client’s investment assets.
+              </li>
+              <li>
+                Developed an Android Application written in Kotlin, that allows
+                companies to manage their employees.
+              </li>
+              <li>Designed an E-commerce mobile app using Sketch.</li>
+            </ul>
+          </Experience>
+
+          <Experience
+            id="ideo"
+            selected={selected === "ideo"}
+            title="Wordpress Developer"
+            period="April 2021 - present"
+            tools={["Wordpress", "Anime.js", "GSAP"]}
           >
             <ul className="mt-6 list-disc pl-4 leading-8">
               <li>
@@ -113,6 +144,39 @@ export default function WorkExperience() {
                 contracts.
               </li>
             </ul>
+          </Experience>
+          <Experience
+            id="playground"
+            selected={selected === "playground"}
+            title="Playground"
+            period="Forever"
+            tools={[
+              "React",
+              "Next.js App Router",
+              "Net.js Server Actions",
+              "Tailwind CSS",
+              "Supabase",
+              "Node.js",
+            ]}
+          >
+            <ul className="mt-6 list-disc pl-4 leading-8">
+              <li>This is my research, development work place.</li>
+              <li>
+                I discover, study new technologies and apply them in personal
+                projects before using them in professional projects.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/marcogianni"
+              target="_blank"
+              className="flex"
+              rel="noopener noreferrer"
+            >
+              <Button variant="secondary" className="mt-6 flex gap-2">
+                <GitHubLogoIcon className=" h-[1.2rem] w-[1.2rem]" />
+                GitHub
+              </Button>
+            </a>
           </Experience>
         </AnimatePresence>
       </div>

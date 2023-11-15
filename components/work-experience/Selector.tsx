@@ -17,8 +17,8 @@ export default function Selector(props: Props) {
     >
       <div
         className={cn(
-          "w-full text-xl p-4 rounded-md flex items-center justify-between transition-colors",
-          selected === id ? "bg-secondary" : "border"
+          "w-full text-xl py-4 px-6 rounded-md border hover:bg-secondary/80 flex items-center justify-between transition-colors duration-500",
+          selected === id && "bg-secondary"
         )}
       >
         <span>{title}</span>

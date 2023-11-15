@@ -1,9 +1,9 @@
-"use client";
+import { motion, cubicBezier } from "framer-motion";
 
-import { motion, cubicBezier, AnimatePresence } from "framer-motion";
-
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+
 const easing = cubicBezier(0.35, 0.17, 0.3, 0.86); // default easing
 
 interface Props {
@@ -29,17 +29,19 @@ export default function Experience(props: Props) {
       exit={{ opacity: 0, x: -40 }}
       className="w-full"
     >
-      <div className="text-2xl text-medium">{title}</div>
-      <div className="text-lg text-medium opacity-50">{period}</div>
-      <div className="mt-4 flex gap-1 flex-wrap">
-        {tools.map((title, index) => (
-          <Badge key={index} variant="outline" className="text-sm">
-            {title}
-          </Badge>
-        ))}
-      </div>
-      <Separator className="mt-6" />
-      {children}
+      <ScrollArea className="h-[350px] w-full">
+        <div className="text-2xl text-medium">{title}</div>
+        <div className="text-lg text-medium opacity-50">{period}</div>
+        <div className="mt-4 flex gap-1 flex-wrap">
+          {tools.map((title, index) => (
+            <Badge key={index} variant="outline" className="text-sm">
+              {title}
+            </Badge>
+          ))}
+        </div>
+        <Separator className="mt-6" />
+        {children}
+      </ScrollArea>
     </motion.div>
   );
 }
