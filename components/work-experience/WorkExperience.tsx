@@ -7,7 +7,6 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 import Selector from "@/components/work-experience/Selector";
 import Experience from "@/components/work-experience/Experience";
-
 import { MotionInView } from "@/components/Motion";
 import { Button } from "@/components/ui/button";
 

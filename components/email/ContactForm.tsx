@@ -16,6 +16,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
+export type EmailFormValues = z.infer<typeof EmailFormSchema>;
+
 const EmailFormSchema = z.object({
   name: z.string(),
   email: z.string().email({
@@ -24,8 +26,6 @@ const EmailFormSchema = z.object({
   subject: z.string(),
   message: z.string(),
 });
-
-export type EmailFormValues = z.infer<typeof EmailFormSchema>;
 
 export function ContactForm() {
   const [loading, setLoading] = useState(false);
