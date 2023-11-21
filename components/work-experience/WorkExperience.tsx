@@ -153,7 +153,7 @@ export default function WorkExperience() {
               tools={[
                 "React",
                 "Next.js App Router",
-                "Net.js Server Actions",
+                "Next.js Server Actions",
                 "Tailwind CSS",
                 "Supabase",
                 "Node.js",
