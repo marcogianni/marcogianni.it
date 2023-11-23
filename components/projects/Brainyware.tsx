@@ -1,7 +1,7 @@
 import Image from "next/image";
-
 import { MotionInView } from "@/components/Motion";
 import ProjectDescription from "@/components/projects/ProjectDescription";
+import Video from "@/components/Video";
 
 export default function Brainyware() {
   return (
@@ -15,12 +15,9 @@ export default function Brainyware() {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <Image
-            className="project-image"
-            alt="Brainyware Doc Chat"
-            width={3580}
-            height={1850}
-            src="/images/brainyware-filesystem.webp"
+          <Video
+            url="https://dokenp1dkkukw6ax.public.blob.vercel-storage.com/brainy-EfOSWbK3mRIBQBb6NTyHVlSLP2xa2y.mp4"
+            poster="/images/brainyware-filesystem.webp"
           />
         </MotionInView>
         <ProjectDescription url="https://demo.brainyware.ai/">
