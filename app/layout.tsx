@@ -54,7 +54,6 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
           {children}
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

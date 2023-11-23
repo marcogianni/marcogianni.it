@@ -38,7 +38,7 @@ export default function IntroAnimation() {
         version="1.1"
         viewBox="0 0 1422 800"
         opacity="1"
-        className="absolute left-0 -ml-1 -mr-1 right-0 z-0 w-full pointer-events-none"
+        className="absolute opacity-30 dark:opacity-70 left-0 -ml-1 -mr-1 right-0 z-0 w-full pointer-events-none"
       >
         <defs>
           <linearGradient
