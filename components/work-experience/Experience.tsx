@@ -3,6 +3,7 @@ import { motion, cubicBezier } from "framer-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import Tool from "@/components/Tool";
 
 const easing = cubicBezier(0.35, 0.17, 0.3, 0.86); // default easing
 
@@ -34,9 +35,7 @@ export default function Experience(props: Props) {
         <div className="text-lg text-medium opacity-50">{period}</div>
         <div className="mt-4 flex gap-1 flex-wrap">
           {tools.map((title, index) => (
-            <Badge key={index} variant="outline" className="text-sm">
-              {title}
-            </Badge>
+            <Tool title={title} key={index} />
           ))}
         </div>
         <Separator className="mt-6" />

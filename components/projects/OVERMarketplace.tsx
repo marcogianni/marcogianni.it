@@ -23,11 +23,13 @@ export default function OVERMarketplace() {
             src="/images/marketplace-desktop.webp"
           />
         </MotionInView>
-        <ProjectDescription url="https://marketplace.ovr.ai/">
-          OVER Marketplace: Designed, developed and maintained a Marketplace
-          Frontend application built with Next.js 13 to enable the buying,
-          selling, renting and managing of NFTs that integrate all smart
-          contract interaction features.
+        <ProjectDescription
+          url="https://marketplace.ovr.ai/"
+          tools={["React", "Next.js", "Styled Components", "Web3", "Sketch"]}
+        >
+          OVER Marketplace: Crafted a Next.js 13 Frontend application for a
+          seamless NFT marketplace experience, enabling users to buy, sell,
+          rent, manage NFTs, and interact with smart contracts.
         </ProjectDescription>
       </div>
       <div className="col-span-12 sm:col-span-3 relative">

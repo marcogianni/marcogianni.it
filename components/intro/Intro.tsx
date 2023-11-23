@@ -23,8 +23,12 @@ export default function Intro() {
           transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
           className="w-full sm:w-9/12 leading-[75px] relative z-20"
         >
-          <div className="text-xl font-regular uppercase relative z-20 text-center">
-            Frontend - UI/UX
+          <div className="text-2xl font-medium uppercase relative z-20 text-center flex justify-center items-center">
+            Frontend
+            <b className="text-3xl px-3 text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-500 animate-gradient font-semibold animate-gradient">
+              &
+            </b>
+            Design
           </div>
         </Motion>
         <Motion
@@ -38,7 +42,7 @@ export default function Intro() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-500 animate-gradient font-semibold animate-gradient">
               Marco
             </span>
-            , nice to meet you. Please take a look around!
+            , nice to meet you. Feel free to explore!
           </div>
         </Motion>
         <Motion

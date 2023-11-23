@@ -20,11 +20,12 @@ export default function Brainyware() {
             poster="/images/brainyware-filesystem.webp"
           />
         </MotionInView>
-        <ProjectDescription url="https://demo.brainyware.ai/">
-          Brainyware: A web app created with Next.js that allows you to upload
-          documents in PDF and TXT format and organise them into folders. You
-          can start a conversation with the AI by selecting the documents to
-          query.
+        <ProjectDescription
+          url="https://demo.brainyware.ai/"
+          tools={["React", "Next.js", "Tailwind CSS"]}
+        >
+          Brainyware: A Next.js-powered web app for organizing and conversing
+          with AI using PDF and TXT documents.
         </ProjectDescription>
       </div>
       <div className="col-span-12 sm:col-span-3 relative">

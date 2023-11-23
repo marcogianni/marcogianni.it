@@ -24,7 +24,10 @@ export default function PC() {
           />
         </MotionInView>
 
-        <ProjectDescription url="https://piercarlocarcereri.it/">
+        <ProjectDescription
+          url="https://piercarlocarcereri.it/"
+          tools={["Sketch"]}
+        >
           Piercarlo Carcereri: Brand identity for an oil and wine producer. In
           this screenshot the logo and bottle labels for wine and oil.
         </ProjectDescription>

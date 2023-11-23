@@ -15,7 +15,7 @@ export default function Skills() {
             }}
             className="font-medium text-4xl text-center mx-auto w-full sm:w-6/12"
           >
-            I design and code beautifully simple things, and I love what I do.
+            I create simple, elegant designs and code to bring them to life.
           </MotionInView>
         </div>
       </div>
@@ -27,7 +27,7 @@ export default function Skills() {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="col-span-12 sm:col-span-4 sm:col-start-3 border border-primary rounded-l-[40px] rounded-r-[40px] sm:rounded-r-[0px] py-10 px-10"
+          className="col-span-12 bg-violet-900/20 sm:col-span-4 sm:col-start-3 border border-primary rounded-l-[40px] rounded-r-[40px] sm:rounded-r-[0px] py-10 px-10"
         >
           <div className="text-center">
             <div className="rounded-full bg-gradient-to-r to-primary from-purple-500 w-16 h-16 flex items-center justify-center mx-auto">
@@ -35,8 +35,8 @@ export default function Skills() {
             </div>
             <h3 className="font-semibold text-2xl mt-6">Frontend Engineer</h3>
             <p className="text-lg pt-4">
-              I like to code things from scratch, and enjoy bringing ideas to
-              life in the browser.
+              I thrive on crafting ideas from scratch into interactive realities
+              in the browser.
             </p>
             <p className="text-lg pt-4 text-primary">Dev tools</p>
 
@@ -67,8 +67,8 @@ export default function Skills() {
             </div>
             <h3 className="font-semibold text-2xl mt-6">UI/UX Designer</h3>
             <p className="text-lg pt-4">
-              I value simple content structure, clean design patterns, and
-              interactions.
+              I prioritize clarity and thoughtful user interactions in my
+              designs.
             </p>
             <p className="text-lg pt-4 text-primary">Design tools</p>
 
