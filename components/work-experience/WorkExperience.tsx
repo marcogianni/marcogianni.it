@@ -65,6 +65,7 @@ export default function WorkExperience() {
           <AnimatePresence>
             <Experience
               id="over-the-reality"
+              key="over-the-reality"
               selected={selected === "over-the-reality"}
               title="Lead Frontend & Smart Contract Engineer"
               period="April 2021 - present"
@@ -99,6 +100,7 @@ export default function WorkExperience() {
 
             <Experience
               id="archeido"
+              key="archeido"
               selected={selected === "archeido"}
               title="Frontend Engineer & UI/UX Designer"
               period="May 2019 - March 2021"
@@ -130,6 +132,7 @@ export default function WorkExperience() {
 
             <Experience
               id="ideo"
+              key="ideo"
               selected={selected === "ideo"}
               title="Wordpress Developer"
               period="April 2021 - present"

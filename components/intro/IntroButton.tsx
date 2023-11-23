@@ -13,8 +13,8 @@ export default function IntroButton() {
   return (
     <Button
       size="lg"
-      variant="secondary"
-      className="mt-12 px-8"
+      variant="outline"
+      className="mt-12 px-8 py-6"
       onClick={() => scrollToId("#skills", -40)}
     >
       Discover

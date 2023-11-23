@@ -57,7 +57,8 @@ export function ContactForm(props: Props) {
       },
     });
 
-    console.debug("response", response);
+    const cleanedResponse = await response.json();
+    console.debug("ContactForm.onSubmit.response", cleanedResponse);
 
     setLoading(false);
     form.reset();
