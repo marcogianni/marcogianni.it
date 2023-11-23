@@ -68,6 +68,9 @@
     -moz-animation: animatedgradient 3s ease-in-out infinite alternate;
     animation: animatedgradient 3s ease-in-out infinite alternate;
   }
+  .intro-text {
+    text-wrap: balance;
+  }
   
   @keyframes animatedgradient {
     0% {

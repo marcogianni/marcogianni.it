@@ -24,7 +24,7 @@ export default function Intro() {
           className="w-full sm:w-9/12 leading-[75px] relative z-20"
         >
           <div className="text-2xl font-medium uppercase relative z-20 text-center flex justify-center items-center">
-            Frontend
+            Code
             <b className="text-3xl px-3 text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-500 animate-gradient font-semibold animate-gradient">
               &
             </b>
@@ -37,10 +37,10 @@ export default function Intro() {
           transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
           className="w-full sm:w-9/12 mt-4 leading-[75px] relative z-20"
         >
-          <div className="text-4xl sm:text-6xl font-medium text-center relative z-20">
-            Hi. I’m{" "}
+          <div className="text-4xl sm:text-6xl font-medium text-center relative z-20 intro-text">
+            Hi. I’m a{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-500 animate-gradient font-semibold animate-gradient">
-              Marco
+              Frontend Engineer
             </span>
             , nice to meet you. Feel free to explore!
           </div>

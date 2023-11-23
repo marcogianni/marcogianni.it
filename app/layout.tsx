@@ -4,7 +4,6 @@ import { AxiomWebVitals } from "next-axiom";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 import "./globals.css";
 
@@ -36,7 +35,7 @@ const borna = localFont({
 export const metadata: Metadata = {
   title: "marcogianni.it",
   description:
-    "I design and code beautifully simple things, and I love what I do.",
+    "I'm a Frontend Engineer and I create simple, elegant designs and code to bring them to life.",
   icons: {
     icon: "/icon.svg",
   },
