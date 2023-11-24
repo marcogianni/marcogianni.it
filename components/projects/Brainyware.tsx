@@ -16,7 +16,7 @@ export default function Brainyware() {
           }}
         >
           <Video
-            url="https://dokenp1dkkukw6ax.public.blob.vercel-storage.com/brainy-EfOSWbK3mRIBQBb6NTyHVlSLP2xa2y.mp4"
+            url="https://ovr-assets.s3.eu-central-1.amazonaws.com/brainy.mp4"
             poster="/images/brainyware-filesystem.webp"
           />
         </MotionInView>
