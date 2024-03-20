@@ -27,8 +27,8 @@ export default function OVER() {
           url="https://www.overthereality.ai/"
           tools={["React", "Next.js", "Tailwind", "Framer Motion"]}
         >
-          OVER the Reality: Crafted a Next.js 14 Frontend application Over
-          Global,
+          OVER the Reality Website with Next.js 14, Tailwind CSS, and Framer
+          Motion. Global,
         </ProjectDescription>
       </div>
       <div className="col-span-12 sm:col-span-3 relative">
