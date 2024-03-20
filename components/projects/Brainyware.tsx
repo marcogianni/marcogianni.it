@@ -15,9 +15,12 @@ export default function Brainyware() {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <Video
-            url="https://ovr-assets.s3.eu-central-1.amazonaws.com/brainy.mp4"
-            poster="/images/brainyware-filesystem.webp"
+          <Image
+            className="project-image"
+            alt="Brainyware Hero"
+            width={3584}
+            height={1858}
+            src="/images/brainyware-filesystem.webp"
           />
         </MotionInView>
         <ProjectDescription
