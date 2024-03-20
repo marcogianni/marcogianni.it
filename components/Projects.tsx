@@ -3,6 +3,7 @@ import PC from "@/components/projects/PC";
 import Brainyware from "@/components/projects/Brainyware";
 import OVERMarketplace from "@/components/projects/OVERMarketplace";
 import HomelessPlanets from "@/components/projects/HomelessPlanets";
+import OVER from "@/components/projects/OVER";
 
 export default function Project() {
   return (
@@ -23,6 +24,7 @@ export default function Project() {
         </div>
       </div>
       <div className="flex flex-col gap-20 sm:gap-32">
+        <OVER />
         <HomelessPlanets />
         <OVERMarketplace />
         <PC />

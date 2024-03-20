@@ -3,7 +3,7 @@ import Image from "next/image";
 import { MotionInView } from "@/components/Motion";
 import ProjectDescription from "@/components/projects/ProjectDescription";
 
-export default function OVERMarketplace() {
+export default function OVER() {
   return (
     <div className="grid grid-cols-12 mt-12 gap-8">
       <div className="col-span-12 sm:col-span-9 relative">
@@ -17,19 +17,18 @@ export default function OVERMarketplace() {
         >
           <Image
             className="project-image"
-            alt="Marketplace Hero"
+            alt="Over Hero"
             width={3584}
             height={1858}
-            src="/images/marketplace-desktop.webp"
+            src="/images/over-desktop.png"
           />
         </MotionInView>
         <ProjectDescription
-          url="https://marketplace.ovr.ai/"
-          tools={["React", "Next.js", "Styled Components", "Web3", "Sketch"]}
+          url="https://www.overthereality.ai/"
+          tools={["React", "Next.js", "Tailwind", "Framer Motion"]}
         >
-          OVER Marketplace: Crafted a Next.js 13 Frontend application for a
-          seamless NFT marketplace experience, enabling users to buy, sell,
-          rent, manage NFTs, and interact with smart contracts.
+          OVER the Reality: Crafted a Next.js 14 Frontend application Over
+          Global,
         </ProjectDescription>
       </div>
       <div className="col-span-12 sm:col-span-3 relative">
@@ -43,10 +42,10 @@ export default function OVERMarketplace() {
         >
           <Image
             className="project-image"
-            alt="Marketplace Intro"
+            alt="Over Intro"
             width={760}
             height={1662}
-            src="/images/marketplace-mobile.webp"
+            src="/images/over-mobile.png"
           />
         </MotionInView>
       </div>
