@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { AxiomWebVitals } from "next-axiom";
 
@@ -41,6 +41,10 @@ export const metadata: Metadata = {
     apple: "/icon.svg",
     shortcut: "/icon.svg",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#030712",
 };
 
 export default function RootLayout({
