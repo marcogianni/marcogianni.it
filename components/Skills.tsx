@@ -4,21 +4,7 @@ import { MotionInView } from "@/components/Motion";
 export default function Skills() {
   return (
     <>
-      <div id="skills" className="grid grid-cols-12 gap-4">
-        <div className="col-span-12">
-          <MotionInView
-            initial="hidden"
-            transition={{ duration: 1.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            className="font-medium text-4xl text-center mx-auto w-full sm:w-6/12"
-          >
-            I create simple, elegant designs and code to bring them to life.
-          </MotionInView>
-        </div>
-      </div>
+     
       <div className="grid grid-cols-12 mt-12 gap-6 sm:gap-0">
         <MotionInView
           initial="hidden"

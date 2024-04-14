@@ -42,8 +42,9 @@ export default function Intro() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-500 animate-gradient font-semibold animate-gradient">
               Frontend Engineer
             </span>
-            , nice to meet you. Feel free to explore!
           </div>
+
+          <div className="text-3xl mt-4 text-balance text-center mx-auto w-full sm:w-8/12">I create simple, elegant designs and code to bring them to life.</div>
         </Motion>
         <Motion
           initial={{ opacity: 0, y: 40 }}
