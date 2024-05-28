@@ -2,6 +2,7 @@ import { MotionInView } from "@/components/Motion";
 import PC from "@/components/projects/PC";
 import Brainyware from "@/components/projects/Brainyware";
 import OVERMarketplace from "@/components/projects/OVERMarketplace";
+import SofiaArt from "@/components/projects/SofiaArt";
 import HomelessPlanets from "@/components/projects/HomelessPlanets";
 import OVER from "@/components/projects/OVER";
 
@@ -29,6 +30,7 @@ export default function Project() {
         <OVERMarketplace />
         <PC />
         <Brainyware />
+        <SofiaArt />
       </div>
     </>
   );

@@ -10,6 +10,7 @@ export default function IntroButton() {
     damping: 30,
     restDelta: 0.01,
   });
+  
   return (
     <Button
       size="lg"
