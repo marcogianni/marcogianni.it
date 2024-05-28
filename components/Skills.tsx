@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <>
      
-      <div className="grid grid-cols-12 mt-12 gap-6 sm:gap-0">
+      <div className="grid grid-cols-12 mt-12 gap-6 sm:gap-0" id="skills">
         <MotionInView
           initial="hidden"
           transition={{ duration: 0.7 }}
