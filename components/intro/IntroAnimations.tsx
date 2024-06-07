@@ -1,34 +1,12 @@
 "use client";
 
-import { motion, cubicBezier, useScroll, useSpring } from "framer-motion";
 import { useRef } from "react";
+import { motion, cubicBezier } from "framer-motion";
 
 const easing = cubicBezier(0.31, 0.77, 0.52, 0.26); // default easing
 
 export default function IntroAnimation() {
   const scrollRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    offset: ["100% 100%", "0% 0%"],
-    target: scrollRef,
-  });
-
-  const { scrollYProgress: scrollYProgress2 } = useScroll({
-    offset: ["0% 0%", "100% 100%"],
-    target: scrollRef,
-  });
-
-  const pathLength = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.01,
-  });
-
-  const pathLength2 = useSpring(scrollYProgress2, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.01,
-  });
 
   return (
     <>
@@ -66,13 +44,6 @@ export default function IntroAnimation() {
           fill="none"
           strokeLinecap="round"
         >
-          <motion.path
-            stroke="#c893fcc2"
-            style={{ pathLength: pathLength, pathOffset: 1 }}
-            id="7"
-            d="M 0 552 Q 355.5 215 711 400 Q 1066.5 585 1422 552"
-            opacity="0.78"
-          ></motion.path>
           <motion.path
             initial={{ pathLength: 0, pathOffset: 1 }}
             animate={{ pathLength: 1, pathOffset: 0 }}
@@ -112,13 +83,6 @@ export default function IntroAnimation() {
             id="2"
             d="M 0 207 Q 355.5 215 711 400 Q 1066.5 585 1422 207"
             opacity="0.12"
-          ></motion.path>
-          <motion.path
-            stroke="#c893fcc2"
-            style={{ pathLength: pathLength2, pathOffset: 0 }}
-            id="1"
-            d="M 0 138 Q 355.5 215 711 400 Q 1066.5 585 1422 138"
-            opacity="0.80"
           ></motion.path>
         </g>
       </svg>
