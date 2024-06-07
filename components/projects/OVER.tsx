@@ -28,7 +28,7 @@ export default function OVER() {
           tools={["React", "Next.js", "Tailwind", "Framer Motion"]}
         >
           OVER the Reality Website with Next.js 14, Tailwind CSS, and Framer
-          Motion. Global,
+          Motion.
         </ProjectDescription>
       </div>
       <div className="col-span-12 sm:col-span-3 relative">
