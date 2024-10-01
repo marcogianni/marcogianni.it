@@ -24,7 +24,7 @@ export default function Brainyware() {
           />
         </MotionInView>
         <ProjectDescription
-          url="https://demo.brainyware.ai/"
+          url="https://www.brwr.ai/"
           tools={["React", "Next.js", "Tailwind CSS"]}
         >
           Brainyware: A Next.js-powered web app for organizing and conversing

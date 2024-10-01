@@ -38,6 +38,12 @@ export default function WorkExperience() {
         <div className="col-span-12 sm:col-span-4 flex flex-col gap-2 sm:gap-4">
           <Selector
             handleSelect={handleSelect}
+            id="joivy"
+            selected={selected}
+            title="Joivy"
+          />
+          <Selector
+            handleSelect={handleSelect}
             id="over-the-reality"
             selected={selected}
             title="Over the Reality"
@@ -63,6 +69,23 @@ export default function WorkExperience() {
         </div>
         <div className="col-span-12 sm:col-span-8 mt-8 sm:mt-0">
           <AnimatePresence>
+            <Experience
+              id="joivy"
+              key="joivy"
+              selected={selected === "joivy"}
+              title="Frontend Developer"
+              period="July 2024 - present"
+              tools={[
+                "React",
+                "Next.js",
+                "Tailwind CSS",
+                "Styled Components",
+                "Gatsby.js",
+              ]}
+            >
+              <div className="mt-6 leading-8">Coming soon...</div>
+            </Experience>
+
             <Experience
               id="over-the-reality"
               key="over-the-reality"
