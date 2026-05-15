@@ -40,7 +40,6 @@ export default function Navbar() {
           transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
         >
           <div className="flex flex-1 items-center space-x-1 sm:space-x-2 justify-end">
-            <NavbarEmailButton />
             <a
               href="https://github.com/marcogianni"
               target="_blank"
