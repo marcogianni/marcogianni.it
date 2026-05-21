@@ -12,6 +12,7 @@ type ErrorResponse<E = AxiosError> = {
   error: E;
 };
 
+
 type BaseResponse<V, E> = Promise<SuccessResponse<V> | ErrorResponse<E>>;
 
 export const requestHandler =
