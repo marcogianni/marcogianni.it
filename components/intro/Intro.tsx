@@ -1,11 +1,15 @@
 import Image from "next/image";
+import { cacheLife } from "next/cache";
 
 import IntroAnimation from "@/components/intro/IntroAnimations";
 import IntroButton from "@/components/intro/IntroButton";
 import { Motion } from "@/components/Motion";
 import TextAnimation from "@/components/TextAnimation";
 
-export default function Intro() {
+export default async function Intro() {
+  "use cache";
+  cacheLife("max");
+
   return (
     <div className="w-full h-screen flex items-center content-center overflow-hidden">
       <Motion

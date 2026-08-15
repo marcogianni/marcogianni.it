@@ -1,10 +1,13 @@
 import { CodeIcon, LayersIcon } from "@radix-ui/react-icons";
+import { cacheLife } from "next/cache";
 import { MotionInView } from "@/components/Motion";
 
-export default function Skills() {
+export default async function Skills() {
+  "use cache";
+  cacheLife("max");
+
   return (
     <>
-     
       <div className="grid grid-cols-12 mt-12 gap-6 sm:gap-0" id="skills">
         <MotionInView
           initial="hidden"

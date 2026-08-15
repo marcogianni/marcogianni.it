@@ -1,13 +1,13 @@
-import { Spring, Tween } from "framer-motion";
+import { Transition } from "framer-motion";
 
 interface ScrollToProps {
   scroller?: HTMLElement | Window | null;
-  transition?: Spring | Tween;
+  transition?: Transition;
   target?: Element | number | string | null;
   offset?: number;
 }
 
-export const useScrollTo = (transition?: Spring | Tween) => {
+export const useScrollTo = (transition?: Transition) => {
   let isStopped = false;
 
   const onWheel = () => {
@@ -17,7 +17,7 @@ export const useScrollTo = (transition?: Spring | Tween) => {
 
   const scrollTo = async (
     target?: Element | number | string | null,
-    offset: number = 0
+    offset: number = 0,
   ) => {
     let y = 0;
 
