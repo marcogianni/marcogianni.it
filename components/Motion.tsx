@@ -1,10 +1,15 @@
 "use client";
 
-import { motion, cubicBezier, AnimationProps, Transition } from "framer-motion";
+import {
+  motion,
+  cubicBezier,
+  HTMLMotionProps,
+  Transition,
+} from "framer-motion";
 
 const easing = cubicBezier(0.35, 0.17, 0.3, 0.86); // default easing
 
-interface Props extends AnimationProps {
+interface Props extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
   className?: string;
   transition?: Transition;

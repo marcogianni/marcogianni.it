@@ -8,6 +8,10 @@ type TextAnimationProps = {
   className?: string;
 };
 
+// Deterministic, evenly-scattered stagger delay (between 1.0s and 2.2s) per
+// character. Avoids calling impure APIs like Math.random() during render.
+const getDelay = (index: number) => 1 + ((index * 7) % 13) / 10;
+
 const TextAnimation: React.FC<TextAnimationProps> = ({ text, className }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const chars = text.split("");
@@ -25,7 +29,7 @@ const TextAnimation: React.FC<TextAnimationProps> = ({ text, className }) => {
             opacity: isElementInView ? 1 : 0,
             transform: isElementInView ? "translateY(0)" : "translateY(50px)",
           }}
-          transition={{ delay: Math.random() * 1.2 + 1 }}
+          transition={{ delay: getDelay(index) }}
           viewport={{ once: true }}
         >
           {char}
