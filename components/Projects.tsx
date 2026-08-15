@@ -1,3 +1,4 @@
+import { cacheLife } from "next/cache";
 import { MotionInView } from "@/components/Motion";
 import PC from "@/components/projects/PC";
 import Brainyware from "@/components/projects/Brainyware";
@@ -6,7 +7,10 @@ import SofiaArt from "@/components/projects/SofiaArt";
 import HomelessPlanets from "@/components/projects/HomelessPlanets";
 import OVER from "@/components/projects/OVER";
 
-export default function Project() {
+export default async function Project() {
+  "use cache";
+  cacheLife("max");
+
   return (
     <>
       <div className="grid grid-cols-12 gap-4 mt-40">

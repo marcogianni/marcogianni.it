@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cacheLife } from "next/cache";
 
 import { Motion } from "@/components/Motion";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
@@ -10,7 +11,10 @@ import {
 import { Button } from "@/components/ui/button";
 import NavbarEmailButton from "@/components/NavbarEmailButton";
 
-export default function Navbar() {
+export default async function Navbar() {
+  "use cache";
+  cacheLife("max");
+
   return (
     <header className="sticky top-0 z-40 w-full">
       <div className="flex h-14 items-center p-4 sm:p-6">
