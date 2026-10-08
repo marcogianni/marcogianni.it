@@ -1,20 +1,13 @@
 import Image from "next/image";
 
-import { MotionInView } from "@/components/Motion";
+import { Reveal } from "@/components/Motion";
 import ProjectDescription from "@/components/projects/ProjectDescription";
 
 export default function OVER() {
   return (
-    <div className="grid grid-cols-12 mt-12 gap-8">
+    <div className="grid grid-cols-12 gap-6 sm:gap-8">
       <div className="col-span-12 sm:col-span-9 relative">
-        <MotionInView
-          initial="hidden"
-          transition={{ duration: 0.8 }}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
+        <Reveal distance={24}>
           <Image
             className="project-image"
             alt="Over Hero"
@@ -22,7 +15,7 @@ export default function OVER() {
             height={1858}
             src="/images/over-desktop.png"
           />
-        </MotionInView>
+        </Reveal>
         <ProjectDescription
           url="https://www.overthereality.ai/"
           tools={["React", "Next.js", "Tailwind", "Framer Motion"]}
@@ -32,14 +25,7 @@ export default function OVER() {
         </ProjectDescription>
       </div>
       <div className="col-span-12 sm:col-span-3 relative">
-        <MotionInView
-          initial="hidden"
-          transition={{ duration: 0.8, delay: 0.2 }}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
+        <Reveal distance={24} delay={0.08}>
           <Image
             className="project-image"
             alt="Over Intro"
@@ -47,7 +33,7 @@ export default function OVER() {
             height={1662}
             src="/images/over-mobile.png"
           />
-        </MotionInView>
+        </Reveal>
       </div>
     </div>
   );

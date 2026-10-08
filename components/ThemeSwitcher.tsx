@@ -18,7 +18,7 @@ export default function ThemeSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon" className="hidden sm:flex">
-          <SunIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 transition-all" />
+          <SunIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>

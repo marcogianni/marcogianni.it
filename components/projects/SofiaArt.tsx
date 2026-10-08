@@ -1,21 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 
-import { MotionInView } from "@/components/Motion";
+import { Reveal } from "@/components/Motion";
 import ProjectDescription from "@/components/projects/ProjectDescription";
 
 export default function SofiaArt() {
   return (
-    <div className="grid grid-cols-12 mt-12 gap-8">
+    <div className="grid grid-cols-12 gap-6 sm:gap-8">
       <div className="col-span-12 sm:col-span-9 relative">
-        <MotionInView
-          initial="hidden"
-          transition={{ duration: 0.8 }}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
+        <Reveal distance={24}>
           <Image
             className="project-image"
             alt="Sofia Art"
@@ -23,7 +16,7 @@ export default function SofiaArt() {
             height={1894}
             src="/images/sofia-art-desktop.webp"
           />
-        </MotionInView>
+        </Reveal>
         <ProjectDescription
           url="https://sofiart.info/"
           tools={["WordPress", "GSAP", "Sketch"]}
@@ -32,14 +25,7 @@ export default function SofiaArt() {
         </ProjectDescription>
       </div>
       <div className="col-span-12 sm:col-span-3 relative">
-        <MotionInView
-          initial="hidden"
-          transition={{ duration: 0.8, delay: 0.2 }}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
+        <Reveal distance={24} delay={0.08}>
           <Image
             className="project-image"
             alt="Marketplace Intro"
@@ -47,7 +33,7 @@ export default function SofiaArt() {
             height={1662}
             src="/images/sofia-art-mobile.webp"
           />
-        </MotionInView>
+        </Reveal>
       </div>
     </div>
   );
