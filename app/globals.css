@@ -1,87 +1,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-    --ring: 262.1 83.3% 57.8%;
-    --radius: 0.75rem;
-  }
- 
-  .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-    --ring: 263.4 70% 50.4%;
-  }
-}
- 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    overscroll-behavior: none;
-  }
 
-  .project-image {
-    @apply rounded-lg shadow-gray-300/20 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px];
-  }
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 224 71.4% 4.1%;
+        --muted: 220 14.3% 95.9%;
+        --muted-foreground: 220 8.9% 46.1%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 224 71.4% 4.1%;
+        --card: 0 0% 100%;
+        --card-foreground: 224 71.4% 4.1%;
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --primary: 262.1 83.3% 57.8%;
+        --primary-foreground: 210 20% 98%;
+        --secondary: 220 14.3% 95.9%;
+        --secondary-foreground: 220.9 39.3% 11%;
+        --accent: 220 14.3% 95.9%;
+        --accent-foreground: 220.9 39.3% 11%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 20% 98%;
+        --ring: 262.1 83.3% 57.8%;
+        --radius: 0.75rem;
 
-  .animate-gradient {
-    background-size: 500%;
-    -webkit-animation: animatedgradient 3s ease-in-out infinite alternate;
-    -moz-animation: animatedgradient 3s ease-in-out infinite alternate;
-    animation: animatedgradient 3s ease-in-out infinite alternate;
-  }
-  .intro-text {
-    text-wrap: balance;
-  }
-  
-  @keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
+        /* Motion tokens — mirrored in lib/motion.ts */
+        --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+        --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+        --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
     }
-    50% {
-      background-position: 100% 50%;
+
+    .dark {
+        --background: 224 71.4% 4.1%;
+        --foreground: 210 20% 98%;
+        --muted: 215 27.9% 16.9%;
+        --muted-foreground: 217.9 10.6% 64.9%;
+        --popover: 224 71.4% 4.1%;
+        --popover-foreground: 210 20% 98%;
+        --card: 224 71.4% 4.1%;
+        --card-foreground: 210 20% 98%;
+        --border: 215 27.9% 16.9%;
+        --input: 215 27.9% 16.9%;
+        --primary: 263.4 70% 50.4%;
+        --primary-foreground: 210 20% 98%;
+        --secondary: 215 27.9% 16.9%;
+        --secondary-foreground: 210 20% 98%;
+        --accent: 215 27.9% 16.9%;
+        --accent-foreground: 210 20% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 20% 98%;
+        --ring: 263.4 70% 50.4%;
     }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 }
 
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground antialiased;
+        overscroll-behavior: none;
+    }
+
+    ::selection {
+        @apply bg-primary/30;
+    }
+
+    .project-image {
+        @apply rounded-2xl border border-border/60 shadow-[0_8px_32px_-12px_rgba(17,17,26,0.25)];
+    }
+
+    .animate-gradient {
+        background-size: 300%;
+        animation: animatedgradient 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes animatedgradient {
+        from {
+            background-position: 0% 50%;
+        }
+        to {
+            background-position: 100% 50%;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .animate-gradient {
+            animation: none;
+        }
+    }
+}

@@ -1,76 +1,75 @@
 import { CodeIcon, LayersIcon } from "@radix-ui/react-icons";
 import { cacheLife } from "next/cache";
-import { MotionInView } from "@/components/Motion";
+
+import { Stagger, StaggerItem } from "@/components/Motion";
+import SectionHeading from "@/components/SectionHeading";
+import Tool from "@/components/Tool";
+
+const skills = [
+  {
+    icon: CodeIcon,
+    title: "Frontend Engineer",
+    description:
+      "I thrive on crafting ideas from scratch into interactive realities in the browser.",
+    toolsLabel: "Dev tools",
+    tools: [
+      "React",
+      "Next.js (App Router)",
+      "Tailwind CSS",
+      "Styled Components",
+      "Redux",
+      "Zustand",
+      "Framer Motion",
+      "Vercel",
+    ],
+  },
+  {
+    icon: LayersIcon,
+    title: "UI/UX Designer",
+    description:
+      "I prioritize clarity and thoughtful user interactions in my designs.",
+    toolsLabel: "Design tools",
+    tools: ["Sketch", "Figma", "Illustrator", "Photoshop", "Pen & Paper"],
+  },
+];
 
 export default async function Skills() {
   "use cache";
   cacheLife("max");
 
   return (
-    <>
-      <div className="grid grid-cols-12 mt-12 gap-6 sm:gap-0" id="skills">
-        <MotionInView
-          initial="hidden"
-          transition={{ duration: 0.7 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          className="col-span-12 bg-violet-900/20 sm:col-span-4 sm:col-start-3 border border-primary rounded-l-[40px] rounded-r-[40px] sm:rounded-r-[0px] py-10 px-10"
-        >
-          <div className="text-center">
-            <div className="rounded-full bg-gradient-to-r to-primary from-purple-500 w-16 h-16 flex items-center justify-center mx-auto">
-              <CodeIcon className="h-10 w-10 text-white" />
+    <section id="skills" className="pt-24 sm:pt-32">
+      <SectionHeading eyebrow="Skills" title="What I do" />
+      <Stagger
+        stagger={0.08}
+        className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6"
+      >
+        {skills.map(({ icon: Icon, title, description, toolsLabel, tools }) => (
+          <StaggerItem
+            key={title}
+            distance={24}
+            className="relative flex flex-col overflow-hidden rounded-[32px] border bg-card/50 p-8 backdrop-blur-sm transition-colors duration-200 ease-out hover:border-primary/40 sm:p-10"
+          >
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-purple-500 shadow-lg shadow-primary/25">
+              <Icon className="h-7 w-7 text-white" />
             </div>
-            <h3 className="font-semibold text-2xl mt-6">Frontend Engineer</h3>
-            <p className="text-lg pt-4">
-              I thrive on crafting ideas from scratch into interactive realities
-              in the browser.
+            <h3 className="mt-6 text-2xl font-semibold">{title}</h3>
+            <p className="mt-3 text-lg text-muted-foreground text-pretty">
+              {description}
             </p>
-            <p className="text-lg pt-4 text-primary">Dev tools</p>
-
-            <ul className="mt-2 flex flex-col gap-2">
-              <li>React</li>
-              <li>Next.js (App Router)</li>
-              <li>Tailwind CSS</li>
-              <li>Styled Components</li>
-              <li>Redux</li>
-              <li>Zustand</li>
-              <li>Framer Motion</li>
-              <li>Vercel</li>
-            </ul>
-          </div>
-        </MotionInView>
-        <MotionInView
-          initial="hidden"
-          transition={{ delay: 0.2, duration: 0.7 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          className="col-span-12 sm:col-span-4 border border-primary sm:border-l-0 rounded-r-[40px] rounded-l-[40px] sm:rounded-l-[0px]  py-10 px-10"
-        >
-          <div className="text-center">
-            <div className="rounded-full bg-gradient-to-r to-primary from-purple-500 w-16 h-16 flex items-center justify-center mx-auto">
-              <LayersIcon className="h-10 w-10 text-white" />
+            <div className="mt-auto pt-8">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+                {toolsLabel}
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {tools.map((tool) => (
+                  <Tool key={tool} title={tool} />
+                ))}
+              </ul>
             </div>
-            <h3 className="font-semibold text-2xl mt-6">UI/UX Designer</h3>
-            <p className="text-lg pt-4">
-              I prioritize clarity and thoughtful user interactions in my
-              designs.
-            </p>
-            <p className="text-lg pt-4 text-primary">Design tools</p>
-
-            <ul className="mt-2 flex flex-col gap-2">
-              <li>Sketch</li>
-              <li>Figma</li>
-              <li>Illustrator</li>
-              <li>Photoshop</li>
-              <li>Pen & Peper</li>
-            </ul>
-          </div>
-        </MotionInView>
-      </div>
-    </>
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </section>
   );
 }

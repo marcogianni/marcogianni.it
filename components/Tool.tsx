@@ -1,5 +1,3 @@
-import { Badge } from "@/components/ui/badge";
-
 interface Props {
   title: string;
 }
@@ -7,8 +5,8 @@ interface Props {
 export default function Tool(props: Props) {
   const { title } = props;
   return (
-    <Badge variant="outline" className="text-sm">
+    <li className="inline-flex items-center rounded-full border border-border/80 bg-secondary/40 px-3 py-1 text-sm font-medium text-secondary-foreground">
       {title}
-    </Badge>
+    </li>
   );
 }

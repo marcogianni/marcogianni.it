@@ -6,7 +6,7 @@ import { ReloadIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-md font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-150 ease-out active:scale-[0.97] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -32,31 +32,55 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   loading?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
+  (
+    {
+      className,
+      variant,
+      size,
+      asChild = false,
+      loading = false,
+      disabled,
+      children,
+      ...props
+    },
+    ref,
+  ) => {
+    const classes = cn(buttonVariants({ variant, size, className }));
+
+    // Slot needs exactly one child element, so the spinner is only rendered
+    // for real <button>s.
+    if (asChild) {
+      return (
+        <Slot className={classes} ref={ref} {...props}>
+          {children}
+        </Slot>
+      );
+    }
+
     return (
-      <Comp
-        disabled={props?.loading}
-        className={cn(buttonVariants({ variant, size, className }))}
+      <button
+        className={classes}
         ref={ref}
+        disabled={disabled || loading}
         {...props}
       >
-        {props.loading && <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />}
-        {props.children}
-      </Comp>
+        {loading && <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />}
+        {children}
+      </button>
     );
-  }
+  },
 );
 Button.displayName = "Button";
 

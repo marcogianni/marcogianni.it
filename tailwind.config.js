@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
+  future: {
+    // Gate every `hover:` utility behind (hover: hover) and (pointer: fine)
+    // so touch devices don't get sticky hover states on tap.
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -55,6 +60,11 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      transitionTimingFunction: {
+        out: "var(--ease-out)",
+        "in-out": "var(--ease-in-out)",
+        drawer: "var(--ease-drawer)",
       },
       keyframes: {
         "accordion-down": {

@@ -1,46 +1,30 @@
-import { motion, cubicBezier } from "framer-motion";
-
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Tool from "@/components/Tool";
 
-const easing = cubicBezier(0.35, 0.17, 0.3, 0.86); // default easing
-
 interface Props {
-  id: string;
   title: string;
   period: string;
-  selected?: boolean;
   tools: string[];
   children: React.ReactNode;
 }
 
 export default function Experience(props: Props) {
-  const { title, id, period, selected = false, tools = [], children } = props;
-
-  if (!selected) return null;
+  const { title, period, tools = [], children } = props;
 
   return (
-    <motion.div
-      key={id}
-      transition={{ duration: 0.4, ease: easing }}
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -40 }}
-      className="w-full"
-    >
-      <ScrollArea className="h-auto sm:h-[350px] w-full">
-        <div className="text-2xl text-medium">{title}</div>
-        <div className="text-lg text-medium opacity-50">{period}</div>
-        <div className="mt-4 flex gap-1 flex-wrap">
-          {tools.map((title, index) => (
-            <Tool title={title} key={index} />
-          ))}
-        </div>
-        <Separator className="mt-6" />
+    <ScrollArea className="h-auto sm:h-[350px] w-full">
+      <h3 className="text-2xl font-medium">{title}</h3>
+      <p className="mt-1 text-lg text-muted-foreground">{period}</p>
+      <ul className="mt-4 flex gap-2 flex-wrap">
+        {tools.map((title) => (
+          <Tool title={title} key={title} />
+        ))}
+      </ul>
+      <Separator className="mt-6" />
+      <div className="text-muted-foreground [&_li::marker]:text-primary">
         {children}
-      </ScrollArea>
-    </motion.div>
+      </div>
+    </ScrollArea>
   );
 }

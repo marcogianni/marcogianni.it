@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { AxiomWebVitals } from "next-axiom";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { MotionProvider } from "@/components/Motion";
 import Navbar from "@/components/Navbar";
 
 import "./globals.css";
@@ -57,8 +58,10 @@ export default function RootLayout({
       <body className={borna.className}>
         <AxiomWebVitals />
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <Navbar />
-          {children}
+          <MotionProvider>
+            <Navbar />
+            {children}
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

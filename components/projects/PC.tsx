@@ -1,20 +1,13 @@
 import Image from "next/image";
 
-import { MotionInView } from "@/components/Motion";
+import { Reveal } from "@/components/Motion";
 import ProjectDescription from "@/components/projects/ProjectDescription";
 
 export default function PC() {
   return (
-    <div className="grid grid-cols-12 mt-12 gap-8">
+    <div className="grid grid-cols-12 gap-6 sm:gap-8">
       <div className="col-span-12 sm:col-span-4 relative">
-        <MotionInView
-          initial="hidden"
-          transition={{ duration: 0.8 }}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
+        <Reveal distance={24}>
           <Image
             className="project-image"
             alt="Piercarlo Carcereri"
@@ -22,7 +15,7 @@ export default function PC() {
             height={2000}
             src="/images/PiercarloCarcereri.webp"
           />
-        </MotionInView>
+        </Reveal>
 
         <ProjectDescription
           url="https://piercarlocarcereri.it/"
@@ -33,14 +26,7 @@ export default function PC() {
         </ProjectDescription>
       </div>
       <div className="col-span-12 sm:col-span-4 relative">
-        <MotionInView
-          initial="hidden"
-          transition={{ duration: 0.8, delay: 0.2 }}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
+        <Reveal distance={24} delay={0.08}>
           <Image
             className="project-image"
             alt="Wine Label"
@@ -48,17 +34,10 @@ export default function PC() {
             height={2362}
             src="/images/WineLabel.webp"
           />
-        </MotionInView>
+        </Reveal>
       </div>
       <div className="col-span-12 sm:col-span-4 relative">
-        <MotionInView
-          initial="hidden"
-          transition={{ duration: 0.8, delay: 0.4 }}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
+        <Reveal distance={24} delay={0.16}>
           <Image
             className="project-image"
             alt="Oil Label"
@@ -66,7 +45,7 @@ export default function PC() {
             height={2988}
             src="/images/OilLabel.webp"
           />
-        </MotionInView>
+        </Reveal>
       </div>
     </div>
   );
