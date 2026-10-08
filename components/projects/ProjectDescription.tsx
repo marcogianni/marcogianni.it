@@ -2,16 +2,22 @@ import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 import { Reveal } from "@/components/Motion";
 import Tool from "@/components/Tool";
+import { cn } from "@/lib/utils";
 
 interface Props {
   children: React.ReactNode;
   url: string;
   tools?: string[];
+  className?: string;
 }
 
 export default function ProjectDescription(props: Props) {
   return (
-    <Reveal delay={0.1} distance={12} className="mt-6 flex flex-col gap-4">
+    <Reveal
+      delay={0.1}
+      distance={12}
+      className={cn("mt-6 flex flex-col gap-4", props.className)}
+    >
       {props.tools && (
         <ul className="flex flex-wrap gap-2">
           {props.tools.map((title) => (
